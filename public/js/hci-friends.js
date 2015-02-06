@@ -10,7 +10,13 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$('.friendname').click(function(e) {
+		e.preventDefault();
+		$(this).text(anagrammedName($(this).text()));
+	});
 }
+
+//$('.friendname').click($(this).text(anagrammedName(name)));
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
@@ -44,3 +50,4 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
